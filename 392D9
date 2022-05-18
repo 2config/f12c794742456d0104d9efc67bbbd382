@@ -334,7 +334,7 @@ local function extendCharacter(character)
     -- here's the actual expander code
     local Heartbeat
     Heartbeat = game:GetService("RunService").Heartbeat:Connect(function(deltaTime)
-        timer += deltaTime
+        timer = deltaTime
         if timer >= (extenderUpdateRate.Value / 100) then -- divided by 100 because milliseconds
             timer = 0
             local bodyPartList = extenderPartList:GetActiveValues()
